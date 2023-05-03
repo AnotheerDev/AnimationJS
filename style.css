@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#firstSection{
+    background-color: rgb(186, 186, 185);
+    color: aliceblue;
+    height: 100vh;
+}
+
+.icone{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#follow{
+    display: flex;
+    justify-content: center;
+}
+
+#twitter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(23, 169, 253);
+    align-items: center;
+}
+
+#facebook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(1, 101, 225);
+}
+
+#instagram{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(188, 42, 141);
+}
+
+i{
+    font-size: 40px;
+}
