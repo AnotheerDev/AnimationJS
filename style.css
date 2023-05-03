@@ -4,7 +4,7 @@
 }
 
 
-#firstSection{
+.firstSection{
     background-color: rgb(186, 186, 185);
     color: aliceblue;
     height: 100vh;
@@ -23,16 +23,6 @@
     padding-bottom: 25px;
 }
 
-#iconeTwitter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(23, 169, 253);
-    align-items: center;
-}
-
 #iconeFacebook{
     display: flex;
     justify-content: center;
@@ -40,6 +30,17 @@
     width: 100px;
     height: 100px;
     background-color: rgb(1, 101, 225);
+    flex-direction: column;
+}
+
+#iconeTwitter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(23, 169, 253);
+    flex-direction: column;
 }
 
 #iconeInstagram{
@@ -49,16 +50,31 @@
     width: 100px;
     height: 100px;
     background-color: rgb(188, 42, 141);
+    flex-direction: column;
 }
 
 i{
     font-size: 40px;
 }
 
-.anim{
+p{
+    opacity: 0%;
+    position: absolute;
+}
+
+.animation{
     transform: translateY(-15px);
-    transform: scale(1.1);
+    transform: scale(1.2);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: all 0.5s ease;
+}
+
+.animation.p{
+    opacity: 100%;
+    position: relative;
+}
+
+.animation.i{
+    rotate: 360°;
 }
