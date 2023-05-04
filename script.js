@@ -2,6 +2,8 @@
 const iconeFacebook = document.querySelector("#iconeFacebook");
     // Initialise une variable pour vérifier si l'icone est en train de tourner ou non
 let isRotating = false;
+// Initialise une variable pour stocker l'état actuel du background de la section
+let isSectionBackgroundFacebook = false;
 
 
     // Ajoute un événement "click" à l'icone Facebook, qui va déclencher une fonction au clic
@@ -11,8 +13,16 @@ iconeFacebook.addEventListener("click", function() {
     this.classList.toggle("animation");
     // Ajoute ou enlève(avec toggle) la classe CSS "animP" à l'élément HTML qui contient le texte "Facebook"
     this.querySelector("p").classList.toggle("animP");
-    // Ajoute ou enlève(avec toggle) la classe CSS "backgroundFacebook" à l'élément HTML correspondant à la section de la page
-    document.querySelector("section").classList.toggle("backgroundFacebook");
+    const section = document.querySelector("section");
+    // Ajoute la couleur du background en fonction de la valeur du boolean 
+    // Vérifie si il y a déjà un background et si c'est différent alors on change la couleur 
+    if (!isSectionBackgroundFacebook) {
+        section.style.backgroundColor = "rgb(1, 101, 225)";
+        isSectionBackgroundFacebook = true;
+    } else {
+        section.style.backgroundColor = "rgb(186, 186, 185)";
+        isSectionBackgroundFacebook = false;
+    }
 
     // Sélectionne l'élément HTML correspondant à l'icone de l'élément cliqué
     const icon = this.querySelector("i");
@@ -35,11 +45,19 @@ iconeFacebook.addEventListener("click", function() {
 
 const iconeTwitter = document.querySelector("#iconeTwitter");
 let isRotatingTwitter = false;
+let isSectionBackgroundTwitter = false;
 
 iconeTwitter.addEventListener("click", function() {
     this.classList.toggle("animation");
     this.querySelector("p").classList.toggle("animP");
-    document.querySelector("section").classList.toggle("backgroundTwitter");
+    const section = document.querySelector("section");
+    if (!isSectionBackgroundTwitter) {
+        section.style.backgroundColor = "rgb(23, 169, 253)";
+        isSectionBackgroundTwitter = true;
+    } else {
+        section.style.backgroundColor = "rgb(186, 186, 185)";
+        isSectionBackgroundTwitter = false;
+    }
 
     const icon = this.querySelector("i");
     icon.style.transition = "transform 1s ease-in-out";
@@ -58,11 +76,19 @@ iconeTwitter.addEventListener("click", function() {
 
 const iconeInstagram = document.querySelector("#iconeInstagram");
 let isRotatingInstagram = false;
+let isSectionBackgroundInstagram = false;
 
 iconeInstagram.addEventListener("click", function() {
     this.classList.toggle("animation");
     this.querySelector("p").classList.toggle("animP");
-    document.querySelector("section").classList.toggle("backgroundInstagram");
+    const section = document.querySelector("section");
+    if (!isSectionBackgroundInstagram) {
+        section.style.backgroundColor = "rgb(23, 169, 253)";
+        isSectionBackgroundInstagram = true;
+    } else {
+        section.style.backgroundColor = "rgb(186, 186, 185)";
+        isSectionBackgroundInstagram = false;
+    }
 
     const icon = this.querySelector("i");
     icon.style.transition = "transform 1s ease-in-out";
@@ -75,3 +101,4 @@ iconeInstagram.addEventListener("click", function() {
         isRotatingInstagram = true;
     }
 });
+
